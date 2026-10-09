@@ -4,6 +4,8 @@ import {admin_routes} from './admin_routes.js'
 
  export const routes =express.Router()
 
+routes.get('/test_limit',(req,res)=>{res.send('ok')})
+
 routes.use('/user',user_routes)
 routes.use('/admin',admin_routes)
 

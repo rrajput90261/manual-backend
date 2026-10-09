@@ -5,9 +5,9 @@ const userSchema = new mongoose.Schema({
     profileImg:{type:Object },
     firstName:{type:String,required:true},
     lastName:{type:String,required:true},
-    gender:{type:String,required:true,enum:['male','female',other]},
+    gender:{type:String,required:true,enum:['male','female','other']},
     email:{type:String,required:true,unique:true},
-    password:{Type:String,required:true},
+    password:{type:String,required:true},
     address:[{
         state: {type:String,required:true},
         city: {type:Number,required:true},
@@ -41,4 +41,4 @@ const userSchema = new mongoose.Schema({
     {timestamps:true}
 )
 
-export const user_model = mongoose.model('user',userSchema)
+export const User_model = mongoose.model('user',userSchema)
